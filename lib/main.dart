@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(MyWidget());
 }
 
-class MyApp extends StatelessWidget {
-  MyApp({Key? key}) : super(key: key);
+class MyWidget extends StatefulWidget {
+  const MyWidget({Key? key}) : super(key: key);
+
+  @override
+  State<MyWidget> createState() => _MyWidgetState();
+}
+
+class _MyWidgetState extends State<MyWidget> {
   int x = 0;
   @override
   Widget build(BuildContext context) {
@@ -57,6 +63,9 @@ class MyApp extends StatelessWidget {
           floatingActionButton: FloatingActionButton(
               onPressed: () {
                 x++;
+                setState(() {
+                  // x++;
+                });
                 print(x.toString());
               },
               child: Icon(Icons.add))),
