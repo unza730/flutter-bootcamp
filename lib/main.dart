@@ -31,11 +31,21 @@ class _MyWidgetState extends State<MyWidget> {
                 child: TextFormField(
                   // keyboardType: TextInputType.phone,
                   keyboardType: TextInputType.emailAddress,
+                  cursorColor: Colors.black,
+                  enabled: true,
                   style: TextStyle(fontSize: 18, color: Colors.black),
                   decoration: InputDecoration(
+                      filled: true,
+                      prefixIcon: Icon(Icons.alternate_email),
+                      fillColor: Colors.grey.withOpacity(0.3),
                       hintText: 'Email',
                       labelText: 'Email typing',
-                      hintStyle: TextStyle(fontSize: 14, color: Colors.red)),
+                      hintStyle: TextStyle(fontSize: 14, color: Colors.red),
+                      enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.red, width: 1),
+                          borderRadius: BorderRadius.circular(10))),
+
+                  onChanged: (value) => {print(value)},
                 ),
               )
             ],
