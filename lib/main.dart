@@ -29,6 +29,8 @@ class _MyWidgetState extends State<MyWidget> {
               Padding(
                 padding: const EdgeInsets.all(9.0),
                 child: TextFormField(
+                  // keyboardType: TextInputType.phone,
+                  keyboardType: TextInputType.emailAddress,
                   style: TextStyle(fontSize: 18, color: Colors.black),
                   decoration: InputDecoration(
                       hintText: 'Email',
