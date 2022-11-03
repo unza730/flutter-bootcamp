@@ -35,7 +35,21 @@ class _MyWidgetState extends State<MyWidget> {
                 title: Text('Asif Taj Tech'),
                 subtitle: Text('Subscribe to my channel'),
                 trailing: Text('3:51 PM'),
-              )
+              ),
+              ListView.builder(
+                  itemCount: 2,
+                  itemBuilder: (context, index) {
+                    return const ListTile(
+                      leading: CircleAvatar(
+                        backgroundColor: Colors.black,
+                        backgroundImage: NetworkImage(
+                            'https://images.pexels.com/photos/5571709/pexels-photo-5571709.jpeg?auto=compress&cs=tinysrgb&w=600'),
+                      ),
+                      title: Text('Asif Taj Tech'),
+                      subtitle: Text('Subscribe to my channel'),
+                      trailing: Text('3:51 PM'),
+                    );
+                  })
             ],
           ),
           floatingActionButton: FloatingActionButton(
