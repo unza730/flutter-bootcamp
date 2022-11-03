@@ -27,11 +27,29 @@ class _MyWidgetState extends State<MyWidget> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: const [
               SizedBox(
-                height: 200,
+                height: 100,
               ),
               Divider(
                 color: Colors.black,
                 thickness: .5,
+              ),
+              SizedBox(
+                height: 100,
+                child: VerticalDivider(
+                  color: Colors.red,
+                ),
+              ),
+              Divider(
+                color: Colors.black,
+                thickness: .5,
+              ),
+              Center(
+                child: CircleAvatar(
+                  radius: 100,
+                  backgroundColor: Colors.black,
+                  backgroundImage: NetworkImage(
+                      "https://images.pexels.com/photos/5571709/pexels-photo-5571709.jpeg?auto=compress&cs=tinysrgb&w=600"),
+                ),
               )
             ],
           ),
