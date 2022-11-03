@@ -25,30 +25,15 @@ class _MyWidgetState extends State<MyWidget> {
           body: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: const [
-              SizedBox(
-                height: 100,
-              ),
-              Divider(
-                color: Colors.black,
-                thickness: .5,
-              ),
-              SizedBox(
-                height: 100,
-                child: VerticalDivider(
-                  color: Colors.red,
-                ),
-              ),
-              Divider(
-                color: Colors.black,
-                thickness: .5,
-              ),
-              Center(
-                child: CircleAvatar(
-                  radius: 100,
-                  backgroundColor: Colors.black,
-                  backgroundImage: NetworkImage(
-                      "https://images.pexels.com/photos/5571709/pexels-photo-5571709.jpeg?auto=compress&cs=tinysrgb&w=600"),
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(9.0),
+                child: TextFormField(
+                  style: TextStyle(fontSize: 18, color: Colors.black),
+                  decoration: InputDecoration(
+                      hintText: 'Email',
+                      labelText: 'Email typing',
+                      hintStyle: TextStyle(fontSize: 14, color: Colors.red)),
                 ),
               )
             ],
