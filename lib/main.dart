@@ -26,27 +26,15 @@ class _MyWidgetState extends State<MyWidget> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Padding(
-                padding: const EdgeInsets.all(9.0),
-                child: TextFormField(
-                  // keyboardType: TextInputType.phone,
-                  keyboardType: TextInputType.emailAddress,
-                  cursorColor: Colors.black,
-                  enabled: true,
-                  style: TextStyle(fontSize: 18, color: Colors.black),
-                  decoration: InputDecoration(
-                      filled: true,
-                      prefixIcon: Icon(Icons.alternate_email),
-                      fillColor: Colors.grey.withOpacity(0.3),
-                      hintText: 'Email',
-                      labelText: 'Email typing',
-                      hintStyle: TextStyle(fontSize: 14, color: Colors.red),
-                      enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.red, width: 1),
-                          borderRadius: BorderRadius.circular(10))),
-
-                  onChanged: (value) => {print(value)},
+              ListTile(
+                leading: CircleAvatar(
+                  backgroundColor: Colors.black,
+                  backgroundImage: NetworkImage(
+                      'https://images.pexels.com/photos/5571709/pexels-photo-5571709.jpeg?auto=compress&cs=tinysrgb&w=600'),
                 ),
+                title: Text('Asif Taj Tech'),
+                subtitle: Text('Subscribe to my channel'),
+                trailing: Text('3:51 PM'),
               )
             ],
           ),
