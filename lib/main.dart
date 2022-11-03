@@ -17,7 +17,7 @@ class _MyWidgetState extends State<MyWidget> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-          backgroundColor: Color.fromARGB(255, 54, 49, 49),
+          backgroundColor: Colors.white,
           appBar: AppBar(
             backgroundColor: Colors.yellow[700],
             title: Text('Lottery App'),
@@ -27,9 +27,12 @@ class _MyWidgetState extends State<MyWidget> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Center(
-                child: Text('Lottery winning number is $x',
-                    style: TextStyle(color: Colors.white)),
-              ),
+                child: Container(
+                    height: 100,
+                    width: 100,
+                    decoration: BoxDecoration(color: Colors.orange[400]),
+                    child: Text("Hello from 4th chapter")),
+              )
             ],
           ),
           floatingActionButton: FloatingActionButton(
