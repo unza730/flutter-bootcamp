@@ -25,13 +25,13 @@ class _MyWidgetState extends State<MyWidget> {
           body: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Center(
-                child: Container(
-                    height: 100,
-                    width: 100,
-                    decoration: BoxDecoration(color: Colors.orange[400]),
-                    child: Text("Hello from 4th chapter")),
+            children: const [
+              SizedBox(
+                height: 200,
+              ),
+              Divider(
+                color: Colors.black,
+                thickness: .5,
               )
             ],
           ),
