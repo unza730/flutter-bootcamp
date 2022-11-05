@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bootcampp/home_screen.dart';
+import 'package:flutter_bootcampp/sreen_two.dart';
+
+// import 'package:flutter_bootcampp/home_screen.dart';
 
 void main() {
   runApp(MyWidget());
@@ -16,52 +20,14 @@ class _MyWidgetState extends State<MyWidget> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-          backgroundColor: Colors.white,
-          appBar: AppBar(
-            backgroundColor: Colors.yellow[700],
-            title: Text('Lottery App'),
-          ),
-          body: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              ListTile(
-                leading: CircleAvatar(
-                  backgroundColor: Colors.black,
-                  backgroundImage: NetworkImage(
-                      'https://images.pexels.com/photos/5571709/pexels-photo-5571709.jpeg?auto=compress&cs=tinysrgb&w=600'),
-                ),
-                title: Text('Asif Taj Tech'),
-                subtitle: Text('Subscribe to my channel'),
-                trailing: Text('3:51 PM'),
-              ),
-              ListView.builder(
-                  itemCount: 2,
-                  itemBuilder: (context, index) {
-                    return const ListTile(
-                      leading: CircleAvatar(
-                        backgroundColor: Colors.black,
-                        backgroundImage: NetworkImage(
-                            'https://images.pexels.com/photos/5571709/pexels-photo-5571709.jpeg?auto=compress&cs=tinysrgb&w=600'),
-                      ),
-                      title: Text('Asif Taj Tech'),
-                      subtitle: Text('Subscribe to my channel'),
-                      trailing: Text('3:51 PM'),
-                    );
-                  })
-            ],
-          ),
-          floatingActionButton: FloatingActionButton(
-              onPressed: () {
-                // x++;
-
-                // setState(() {
-                //   // x++;
-                // });
-                // print(x.toString());
-              },
-              child: Icon(Icons.refresh))),
+      title: 'Flutter Demo',
+      theme: ThemeData(primarySwatch: Colors.blue),
+      initialRoute: HomeScreen.id,
+      routes: {
+        HomeScreen.id: (context) => HomeScreen(),
+        ScreenTwo.id: (context) => ScreenTwo()
+      },
+      // home: HomeScreen(),
     );
   }
 }
